@@ -10,7 +10,7 @@ android_app {
         "SettingsLibDefaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: ["src/**/*.java", "src/**/*.kt"],
     certificate: "platform",
     resource_dirs: ["res"],
     platform_apis: true,
