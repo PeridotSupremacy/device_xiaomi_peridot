@@ -83,7 +83,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         context.startServiceAsUser(new Intent(context, ColorModeService.class), UserHandle.CURRENT);
 
         // Start Thermal Management Services
-        ThermalUtils.startService(context);
+        ThermalUtils.getInstance(context).startService();
 
         // Start Refresh Rate Service
         RefreshUtils.startService(context);
