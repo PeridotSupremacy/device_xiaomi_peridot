@@ -337,6 +337,10 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/libqcrilNrVoiceModule.so': blob_fixup()
         .sig_replace('a1 00 80 52 22', 'a1 00 80 52 02'),
+    ('vendor/lib64/libqcrilNr.so',
+     'vendor/lib64/libril-db.so'
+    ): blob_fixup()
+        .binary_regex_replace(rb'persist\.vendor\.radio\.poweron_opt', rb'persist.vendor.radio.poweron_ign'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
