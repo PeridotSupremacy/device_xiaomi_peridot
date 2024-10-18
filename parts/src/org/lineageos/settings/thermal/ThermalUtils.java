@@ -53,17 +53,15 @@ public final class ThermalUtils {
     protected static final int STATE_STREAMING = 7;
     protected static final int STATE_VIDEO = 8;
 
-    private static final Map<Integer, String> THERMAL_STATE_MAP = Map.of(
-        STATE_DEFAULT, "0",
-        STATE_BENCHMARK, "6",
-        STATE_BROWSER, "11",
-        STATE_CAMERA, "15",
-        STATE_DIALER, "1",
-        STATE_GAMING, "19",
-        STATE_NAVIGATION, "19",
-        STATE_STREAMING, "4",
-        STATE_VIDEO, "21"
-    );
+    private static final String THERMAL_STATE_DEFAULT = "0";
+    private static final String THERMAL_STATE_BENCHMARK = "6";
+    private static final String THERMAL_STATE_BROWSER = "11";
+    private static final String THERMAL_STATE_CAMERA = "15";
+    private static final String THERMAL_STATE_DIALER = "1";
+    private static final String THERMAL_STATE_GAMING = "19";
+    private static final String THERMAL_STATE_NAVIGATION = "19";
+    private static final String THERMAL_STATE_STREAMING = "14";
+    private static final String THERMAL_STATE_VIDEO = "21";
 
     private static final String THERMAL_BENCHMARK = "thermal.benchmark=";
     private static final String THERMAL_BROWSER = "thermal.browser=";
