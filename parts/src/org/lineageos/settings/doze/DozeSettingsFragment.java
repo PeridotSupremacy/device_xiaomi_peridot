@@ -20,7 +20,7 @@ package org.lineageos.settings.doze;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.app.DialogFragment;
+import androidx.fragment.app.DialogFragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -32,15 +32,15 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreference;
 
 import com.android.settingslib.widget.MainSwitchPreference;
+import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
-public class DozeSettingsFragment extends PreferenceFragment
+public class DozeSettingsFragment extends SettingsBasePreferenceFragment
         implements OnPreferenceChangeListener, OnCheckedChangeListener {
     private MainSwitchPreference mSwitchBar;
 
